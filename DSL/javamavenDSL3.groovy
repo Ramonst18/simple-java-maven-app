@@ -7,7 +7,8 @@ job('Java Maven App DSL 3') {
     }
   }
   triggers {
-    githubPush("* * * * *")
+    pollSCM()
+    githubPush()
   }    
   steps {
     maven {
