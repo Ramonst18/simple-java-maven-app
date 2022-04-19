@@ -8,7 +8,6 @@ job('Java Maven App DSL 3') {
   }
   triggers {
     githubPush()
-    cron('H/1 * * * *')
   }    
   steps {
     maven {
@@ -20,7 +19,7 @@ job('Java Maven App DSL 3') {
       goals('test')
     }
     shell('''
-    echo "Entrega: Desplegando la aplicación" 
+    echo "Entrega: Desplegando la aplicacióno" 
     java -jar "/var/jenkins_home/workspace/Java Maven App DSL 3/target/my-app-1.0-SNAPSHOT.jar"
     ''')  
   }
